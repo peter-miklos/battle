@@ -1,7 +1,11 @@
 
-<div style='border: 3px dashed red; width: 454px'>
 <% if @name %>
-  <h1>My name is <%=@name%></h1>
+<h1>My name is <%=@name%></h1>
 <% end %>
+<form action="/named-cat">
+  <input type="text" name="name"></input>
+  <input type="submit" value="Submit"></input>
+</form>
+<div style='border: 3px dashed red; width: 454px'>
   <img src='http://bit.ly/1eze8aE'>
 </div>
