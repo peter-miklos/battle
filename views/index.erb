@@ -1,4 +1,7 @@
+
 <div style='border: 3px dashed red; width: 454px'>
-  <h1>My name is <%=@random_name%></h1>
+<% if @name %>
+  <h1>My name is <%=@name%></h1>
+<% end %>
   <img src='http://bit.ly/1eze8aE'>
 </div>
