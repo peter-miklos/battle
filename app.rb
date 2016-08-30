@@ -5,7 +5,17 @@ get '/' do
 end
 
 get '/secret' do
-  "Stupid shotgun"
+  "Shhhhhhh"
+end
+
+get '/dog' do
+  "woof"
+end
+
+get '/cat' do
+  '<div>
+  <img src="http://bit.ly/1eze8aE" alt="cat">
+  </div>'
 end
 
 set :session_secret, 'super secret'
