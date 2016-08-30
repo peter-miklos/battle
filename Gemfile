@@ -1,2 +1,4 @@
 source 'https://rubygems.org'
-gem 'sinatra', :github => "sinatra/sinatra"
+ruby "2.3.1"
+gem 'sinatra'
+gem 'shotgun'
