@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
     capybara (2.8.1)
@@ -46,6 +46,9 @@ DEPENDENCIES
   capybara
   rspec-sinatra
   sinatra
+
+RUBY VERSION
+   ruby 2.2.3p173
 
 BUNDLED WITH
    1.12.5
