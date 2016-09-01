@@ -13,16 +13,9 @@ subject (:thao) {described_class.new("Thao")}
     expect(matt.hitpoint).to eq 100
   end
 
-  describe '#attack' do
-    it 'damages player 2' do
-      expect(thao).to receive(:receive_damage)
-      matt.attack(thao)
-    end
-  end
-
   describe '#receive_damage' do
     it 'reduces the hitpoint by 10 following attack on player 2' do
-      matt.attack(thao)
+      thao.receive_damage
       expect(thao.hitpoint).to eq 90
     end
   end
