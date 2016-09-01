@@ -17,6 +17,6 @@ feature 'Attack' do
 
   scenario "Switch turns" do
     sign_in_and_play
-    expect($game.current_turn.name).to eq "Peter"
+    expect(Game.instance.current_turn.name).to eq "Peter"
   end
 end
