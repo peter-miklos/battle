@@ -1,8 +1,7 @@
 require 'game'
 
 describe Game do
-
-subject (:game) {described_class.new}
+subject (:game) {described_class.new(player, player)}
 let (:player) { double :player, receive_damage: true }
 
   describe '#attack' do
@@ -11,5 +10,4 @@ let (:player) { double :player, receive_damage: true }
       game.attack(player)
     end
   end
-
 end
