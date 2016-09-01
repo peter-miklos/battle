@@ -3,6 +3,6 @@ require 'spec_helper'
 feature 'Enter names' do
   scenario 'submitting names' do
     sign_in_and_play
-    expect(page).to have_content "Matt vs. Alfie"
+    expect(page).to have_content "Matt vs. Thao"
   end
 end
