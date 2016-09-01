@@ -1,8 +1,9 @@
 require 'game'
 
 describe Game do
-  let(:player1) {double :player1}
-  let(:player2) {double :player2}
+  let(:player1) {double(:player1, points: 30)}
+  let(:player2) {double(:player2, points: 20)}
+  let(:player3) {double(:player3, points: 0)}
   subject(:game) {described_class.new(player1, player2)}
 
   context "#initialize" do
@@ -36,6 +37,17 @@ describe Game do
 
     it "finds the opponent of the player2" do
       expect(game.opponent_of(player2)).to eq player1
+    end
+  end
+
+  context "#game_over?" do
+    it "returns true if any of the players has 0 or less than 0 points" do
+      other_game = described_class.new(player1, player3)
+      expect(other_game.game_over?).to eq true
+    end
+
+    it "returns false if both of the players have more than 0 points" do
+      expect(game.game_over?).to eq false
     end
   end
 end

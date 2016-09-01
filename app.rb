@@ -22,15 +22,24 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  get '/attack' do
+  post '/attack' do
     @game = $game
     @game.attack($game.opponent_of(@game.current_turn))
-    erb :attack
+    if @game.game_over?
+      redirect('/game_over')
+    else
+      erb :attack
+    end
   end
 
   post '/switch_turns' do
     $game.switch_turns
     redirect('/play')
+  end
+
+  get '/game_over' do
+    @game = $game
+    erb :game_over
   end
 
   run! if app_file == $0

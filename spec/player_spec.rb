@@ -14,5 +14,10 @@ describe Player do
     it 'reduces the hit points by 10' do
       expect{player1.attack(player2)}.to change{player2.points}.by(-10)
     end
+
+    # it "returns warning message if the point cannot be deducted" do
+    #   20.times { player1.receive_damage }
+    #   expect(player1.receive_damage).to eq "player1 lost the game"
+    # end
   end
 end
