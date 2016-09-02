@@ -2,10 +2,11 @@ class Player
   DEFAULT_POINTS = 100
   DEFAULT_DAMAGE = 10
 
-  attr_reader :name, :points
+  attr_reader :name, :points, :init_points
 
   def initialize(name, init_points = DEFAULT_POINTS)
     @name = name
+    @init_points = init_points
     @points = init_points
   end
 

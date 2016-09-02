@@ -1,7 +1,10 @@
 <%= @game.player1.name %> vs. <%= @game.player2.name %><br>
-<%= @game.player1.name %>'s hitpoint is <%= @game.player1.points %><br>
-
-<%= @game.player2.name %>'s hitpoint is <%= @game.player2.points %><br>
+<%= @game.player1.name %>'s hitpoint is <%= @game.player1.points %>
+<progress value="<%= @game.player1.points%>" max="<%= @game.player1.init_points %>">
+</progress><br>
+<%= @game.player2.name %>'s hitpoint is <%= @game.player2.points %>
+<progress value="<%= @game.player2.points%>" max="<%= @game.player2.init_points %>">
+</progress><br>
 
 <%= @game.current_turn.name %>'s turn
 
