@@ -7,6 +7,14 @@ class Game
     @attacker = player_1
   end
 
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+
+  def self.instance
+    @game
+  end
+
   def player_1
     @players.first
   end
