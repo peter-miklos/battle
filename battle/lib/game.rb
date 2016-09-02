@@ -16,11 +16,11 @@ class Game
   end
 
   def switch_turns
-    if @attacker == player_1
-       @attacker = player_2
-    else
-      @attacker = player_1
-    end
+    @attacker = (@attacker == player_1 ? player_2 : player_1)
+  end
+
+  def attacked_player
+    @attacker == player_1 ? player_2 : player_1
   end
 
   def attack(player)

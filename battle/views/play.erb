@@ -1,5 +1,6 @@
 <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
-<%="#{@game.player_1.name}: #{@game.player_1.hitpoint}, #{@game.player_2.name}: #{@game.player_2.hitpoint}"%>
+<%= "#{@game.player_1.name}: #{@game.player_1.hitpoint}" %><br>
+<%= "#{@game.player_2.name}: #{@game.player_2.hitpoint}"%><br>
 <form action='/attack'>
   <input type='submit' value='Attack'>
 </form>

@@ -1,6 +1,7 @@
-<%= @game.player_1.name %> attacked <%= @game.player_2.name %>
-<%="#{@game.player_1.name}: #{@game.player_1.hitpoint}, #{@game.player_2.name}: #{@game.player_2.hitpoint}"%>
-<%="#{@game.attacker.name}'s turn to fight"%>
-<form action='/play'>
+<%= @game.attacker.name %> attacked <%= @game.attacked_player.name %><br>
+<%="#{@game.player_1.name}: #{@game.player_1.hitpoint}" %><br>
+<%= "#{@game.player_2.name}: #{@game.player_2.hitpoint}"%><br>
+<%="#{@game.attacked_player.name}'s turn to fight"%><br>
+<form action='/switch_turns'>
   <input type='submit' value='OK'>
 </form>

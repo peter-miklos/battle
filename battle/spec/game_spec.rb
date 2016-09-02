@@ -24,4 +24,15 @@ let (:player2) { double :player2, receive_damage: true }
     end
   end
 
+  describe '#attacked_player' do
+    it 'returns player2 if the attacker is player1' do
+      expect(game.attacked_player).to eq player2
+    end
+
+    it 'returns player1 if the attacked is player2' do
+      game.switch_turns
+      expect(game.attacked_player).to eq player1
+    end
+  end
+
 end
