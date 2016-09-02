@@ -11,10 +11,6 @@ class Battle < Sinatra::Base
 enable :sessions
 
   get '/play' do
-    # @player_1 = $player_1.name
-    # @player_2 = $player_2.name
-    # @player_1_hp = $player_1.hitpoint
-    # @player_2_hp = $player_2.hitpoint
     @game = $game
     erb :play
   end
@@ -27,10 +23,9 @@ enable :sessions
   end
 
   get '/attack' do
-    # @player_1 = $player_1.name
-    # @player_2 = $player_2.name
     @game = $game
     @game.attack(@game.player_2)
+    @game.switch_turns
     erb :attack
   end
 
