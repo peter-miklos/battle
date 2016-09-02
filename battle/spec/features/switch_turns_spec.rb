@@ -9,8 +9,7 @@ feature 'switches turns' do
 
   scenario 'switches from player 2 to player 1 after second attack' do
     sign_in_and_play
-    click_button('Attack')
-    click_button('OK')
+    attack_and_switch
     click_button('Attack')
     expect(page).to have_content "Matt's turn to fight"
   end

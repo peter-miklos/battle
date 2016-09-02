@@ -10,8 +10,7 @@ feature 'Attacking' do
 
   scenario 'player 2 attacks player 1 after the first switch' do
     sign_in_and_play
-    click_button 'Attack'
-    click_button 'OK'
+    attack_and_switch
     click_button 'Attack'
     expect(page).to have_content "Thao attacked Matt"
   end

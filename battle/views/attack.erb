@@ -1,6 +1,7 @@
 <%= @game.attacker.name %> attacked <%= @game.attacked_player.name %><br>
 <% if @game.player_1.hitpoint <= 0 || @game.player_2.hitpoint <= 0 %>
-<%= "#{@game.attacked_player.name} died." %>
+<%= "#{@game.attacked_player.name} died." %><br>
+<img src="http://www.reactiongifs.com/wp-content/uploads/2012/12/captain-america.gif">
 <% else %>
 <%= "#{@game.player_1.name}: #{@game.player_1.hitpoint}" %><br>
 <%= "#{@game.player_2.name}: #{@game.player_2.hitpoint}"%><br>
