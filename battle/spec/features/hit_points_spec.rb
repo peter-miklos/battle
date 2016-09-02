@@ -14,7 +14,7 @@ feature 'shows hitpoints of players' do
     expect(page).to have_content "Thao: 90"
   end
 
-  scenario 'display the current hitpoint of player 1 after second atteck' do
+  scenario 'display the current hitpoint of player 1 after second attack' do
     sign_in_and_play
     click_button('Attack')
     click_button('OK')

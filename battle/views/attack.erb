@@ -1,7 +1,11 @@
 <%= @game.attacker.name %> attacked <%= @game.attacked_player.name %><br>
-<%="#{@game.player_1.name}: #{@game.player_1.hitpoint}" %><br>
+<% if @game.player_1.hitpoint <= 0 || @game.player_2.hitpoint <= 0 %>
+<%= "#{@game.attacked_player.name} died." %>
+<% else %>
+<%= "#{@game.player_1.name}: #{@game.player_1.hitpoint}" %><br>
 <%= "#{@game.player_2.name}: #{@game.player_2.hitpoint}"%><br>
-<%="#{@game.attacked_player.name}'s turn to fight"%><br>
+<%= "#{@game.attacked_player.name}'s turn to fight"%><br>
 <form action='/switch_turns'>
   <input type='submit' value='OK'>
 </form>
+<% end %>
